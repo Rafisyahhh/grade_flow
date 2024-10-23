@@ -30,7 +30,11 @@ Route::get('/Data-Siswa', function () {
 });
 
 Route::get('/Data-Nilai', function () {
-    return view('DataSiswa.data');
+    return view('DataNilaiSiswa.data');
+});
+
+Route::get('/Data-Nilai/Detail', function () {
+    return view('DataNilaiSiswa.detail');
 });
 
 

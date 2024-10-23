@@ -8,7 +8,7 @@
             <div class="flex">
                 <a href="{{ '/Nilai-Siswa' }}"
                     class="flex p-3 px-14 bg-primary-80 rounded-xl text-white text-[12px] text-md font-semibold lg:text-[14px]">
-                    Login
+                    Kembali
                 </a>
             </div>
         </div>

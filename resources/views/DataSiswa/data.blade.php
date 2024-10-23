@@ -1,8 +1,11 @@
 @extends('template-admin')
 @section('content')
     <div class="container mx-auto px-4 py-8">
+        <div class="float-end py-5">
+            <input type="text" placeholder="Cari Nama Siswa" class="bg-light p-3 rounded-lg outline-gray-400 shadow-md text-dark text-[14px]">
+        </div>
         <div class="max-w-5xl ml-60 py-10">
-            <div class="relative flex flex-col w-full h-full overflow-x-scroll text-dark bg-white shadow-md rounded-lg">
+            <div class="relative flex flex-col w-full h-full overflow-x-scroll text-dark bg-white shadow-xl rounded-lg">
                 <table class="w-full text-left table-auto min-w-max bg-light">
                     <thead>
                         <tr>
