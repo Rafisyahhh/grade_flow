@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{ asset('images/icon-web.png') }}" type="image/x-icon">
     <title>GradeFlow - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     @vite('resources/css/app.css')
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
 </head>
 
 <body>
@@ -23,12 +25,12 @@
                 <ul class="space-y-12 flex flex-col justify-center text-[14px] tracking-wider">
                     <li class="flex items-center gap-4 text-light font-semibold">
                         <img src="{{ asset('images/student.png') }}" alt="siswa">
-                        <a href="{{'/Data-Siswa'}}">Data Siswa</a>
+                        <a href="{{ '/Data-Siswa' }}">Data Siswa</a>
                     </li>
 
                     <li class="flex items-center gap-4 text-light font-semibold">
                         <img src="{{ asset('images/grade.png') }}" alt="siswa">
-                        <a href="{{'/Data-Nilai'}}">Nilai Siswa</a>
+                        <a href="{{ '/Data-Nilai' }}">Nilai Siswa</a>
                     </li>
                 </ul>
             </div>
@@ -36,32 +38,22 @@
         {{-- end sidebar --}}
 
         {{-- top bar --}}
-        <div class="absolute bg-primary w-[1040px] ml-64 py-2 px-5 rounded-lg text-white left-68 shadow-md">
-            {{-- profile button --}}
-            <div class="relative">
-                <!-- Hidden checkbox untuk toggle -->
-                <input type="checkbox" class="hidden peer" id="profile-toggle">
-
-                <!-- Button -->
-                <label for="profile-toggle"
-                    class="bg-white flex float-end rounded-full w-10 h-10 cursor-pointer hover:bg-gray-100">
-                    <img src="{{ asset('images/user.png') }}" alt="User" class="w-5 h-5 m-auto">
-                </label>
-
-                <!-- Dropdown Menu -->
-                <div
-                    class="absolute right-0 top-12 mt-2 w-36 bg-white rounded-lg shadow-xl py-2 z-10 hidden peer-checked:block">
-                    <a href="" class="block px-4 py-2 text-[14px] text-dark hover:bg-gray-100">
-                        Nama User
-                    </a>
-                    <hr class="px-5">
-                    <form method="POST" action="">
-                        @csrf
-                        <button type="submit" class="w-full text-[14px] text-left px-4 py-2 text-red-600 hover:bg-gray-100">
-                            Logout
-                        </button>
-                    </form>
+        <div class="absolute bg-primary w-[1040px] ml-64 py-1 px-5 rounded-lg text-white left-68 shadow-md">
+            <div class="dropdown dropdown-end float-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full bg-white">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"/>
+                  </div>
                 </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-36 p-4 shadow text-dark text-md font-medium space-y-3">
+                  <li><a>Settings</a></li>
+                  <li><a class="text-red-600">Logout</a></li>
+                </ul>
+              </div>
             </div>
             {{-- end profile button --}}
         </div>
@@ -69,6 +61,7 @@
     </div>
 
     @yield('content')
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>

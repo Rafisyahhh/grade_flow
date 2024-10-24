@@ -35,7 +35,7 @@
                             XII RPL 2
                         </td>
                         <td class="p-4 py-5">
-                            <a href="{{'/Data-Nilai/Detail'}}" class="bg-yellow-400 shadow-md py-1 px-4 rounded-md text-white font-medium">Detail</a>
+                            <a href="{{'/Data-Nilai/Detail'}}" class="bg-yellow-400 shadow-md py-3 px-4 rounded-md text-white font-medium hover:duration-200">Detail</a>
                         </td>
                     </tr>
                 </tbody>
